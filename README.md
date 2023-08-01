@@ -33,7 +33,7 @@ python BackupScheduler.py
 ##Beispiel
 
 ```javascript
-Willkommen beim Einfachen Backup-Tool!
+Willkommen beim einfachen Backup-Tool!
 Gib den Pfad des Quellverzeichnisses ein, das gesichert werden soll: /pfad/zum/quellverzeichnis
 Gib den Pfad des Zielverzeichnisses (externes Speichergerät) ein: /pfad/zum/externen_speicher
 Gib das Sicherungsintervall in Sekunden ein (z. B. 3600 für 1 Stunde): 3600
