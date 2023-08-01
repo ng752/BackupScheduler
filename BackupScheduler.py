@@ -7,15 +7,15 @@ def backup_files(source_path='test', destination_path='test_backup', interval=36
         try:
             # Check if the source directory exists
             if not os.path.exists(source_path):
-                print("Error: The specified source directory does not exist.")
+                print("Fehler: Das eingegebene Quellverzeichnis konnte nicht gefunden werden.")
                 return
 
             # Copy files to destination directory
             shutil.copytree(source_path, destination_path)
 
-            print(f"Backup successful: {source_path} -> {destination_path}")
+            print(f"Sicherung erfolgreich: {source_path} -> {destination_path} ")
         except Exception as e:
-            print(f"Error during backup: {e}")
+            print(f"Fehler beim Backup: {e}")
 
         time.sleep(interval)
 
@@ -23,13 +23,13 @@ if __name__ == "__main__":
     print("Willkommen beim einfachen Backup-Tool!")
 
     # Input source path
-    source_directory = input("Gebe den Dateipfad der zu sichernden Dateien an: ").strip()
+    source_directory = input("Gib den Pfad des Quellverzeichnisses ein, das gesichert werden soll: ").strip()
 
     # Input destination path (external storage device)
-    destination_directory = input("Gebe den Ziel-Dateipfad (externe Festplatte) an: ").strip()
+    destination_directory = input("Gib den Pfad des Zielverzeichnisses (externes Speichergerät) ein: ").strip()
 
     # Input backup interval in seconds
-    backup_interval_seconds = int(input("Gebe den Backup Intervall in Sekunden ein(z.B., 3600 für eine Stunde): "))
+    backup_interval_seconds = int(input("Gib das Sicherungsintervall in Sekunden ein (z. B. 3600 für 1 Stunde): "))
 
     # Schedule the backup
     backup_files(source_directory, destination_directory, backup_interval_seconds)
