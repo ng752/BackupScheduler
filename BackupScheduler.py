@@ -20,16 +20,16 @@ def backup_files(source_path='test', destination_path='test_backup', interval=36
         time.sleep(interval)
 
 if __name__ == "__main__":
-    print("Welcome to the Simple Backup Tool!")
+    print("Willkommen beim einfachen Backup-Tool!")
 
     # Input source path
-    source_directory = input("Enter the path of the source directory to backup: ").strip()
+    source_directory = input("Gebe den Dateipfad der zu sichernden Dateien an: ").strip()
 
     # Input destination path (external storage device)
-    destination_directory = input("Enter the path of the destination directory (external storage device): ").strip()
+    destination_directory = input("Gebe den Ziel-Dateipfad (externe Festplatte) an: ").strip()
 
     # Input backup interval in seconds
-    backup_interval_seconds = int(input("Enter the backup interval in seconds (e.g., 3600 for 1 hour): "))
+    backup_interval_seconds = int(input("Gebe den Backup Intervall in Sekunden ein(z.B., 3600 für eine Stunde): "))
 
     # Schedule the backup
     backup_files(source_directory, destination_directory, backup_interval_seconds)
